@@ -1,0 +1,65 @@
+/* h1 {
+    color:orange;
+}
+
+img{
+    width: 400px;
+} */
+
+body { 
+    color: #333333;
+    font-family: arial;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 0 16px;
+    
+    display: flex;  /* enabling flexbox */
+    flex-direction: column; /* evething goes from top to bottom */
+    min-height: 100vh;  /* setting the minimum height to the browser's height, vh = viewport height*/
+}
+
+.main-content {
+    flex-grow: 1; /* allow the element to grow as much as it needs, 1 means to take all left over space*/
+}
+
+footer {
+    color: #888888;
+    border-top: 1px solid #eeeeee;
+    padding: 16px 0;
+    margin-top: 16px; 
+}
+
+header {
+    margin-top: 16px;
+    margin-bottom: 48px;
+}
+
+h1 {
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+
+header a {  /* targeting only the links in the header */
+    color: #888888;
+    margin-right: 16px;
+    text-decoration: none;
+}
+
+.portrait {
+    width: 400px;
+} 
+
+input {
+    border: 1px solid #cccccc;
+    padding: 8px;
+
+}
+
+button {
+    cursor: pointer;
+    border: 1px solid #888888;
+    background: #888888;
+    color: white;
+    padding: 8px;
+}
+
