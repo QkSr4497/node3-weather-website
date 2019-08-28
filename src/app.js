@@ -101,7 +101,6 @@ app.get('/help', (req, res) => {
 //     res.send('<h1 style="font-size:900%;">About page</h1>');   // providing html right inside the string 
 // });
 
-
 app.get('/weather', (req, res) => {   
     // res.send('Your weather');
     if (!req.query.address) {   // query is the information provided in the url    
