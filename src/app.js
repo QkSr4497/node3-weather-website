@@ -33,10 +33,6 @@ app.use(express.static(publicDirectoryPath));  // use is a way to customize our 
 
 
 
-
-
-
-
 app.get('', (req, res) => {
     res.render('index', {   // allows to render one of our views (handlebars templates), we configured express to use the view engine: hbs
                             // no need for the file extension
