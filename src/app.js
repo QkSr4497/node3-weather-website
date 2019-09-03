@@ -9,6 +9,8 @@ const geocode = require('./utils/geocode');
 // console.log(path.join(__dirname, '../public'));
 const app = express();  // creating a new express application
 
+const port = process.env.PORT || 3000;  // getting port from heroku if it exists
+
 // Define paths for Express config
 const publicDirectoryPath = path.join(__dirname, '../public');
 const viewsPath = path.join(__dirname, '../templates/views'); // absolute path to the new templates/views folder (which is instead the previous default folder called views)
@@ -174,12 +176,12 @@ app.get('*', (req, res) => {    // the star * means to match anything the hasn't
 // app.com/help
 // app.com/about
 
-app.listen(3000, () => {    // starts up the server and has it listen on port 3000 which is good for our local devloping environment and for the purpose for viewing things on our machine
+app.listen(port, () => {    // starts up the server and has it listen on port 3000 which is good for our local devloping environment and for the purpose for viewing things on our machine
                             // the callback function is optional and it runs when the server is up and running. the process of stating up a sever is an asynchronous process
                             // the server will stay up and running, listening and processing new requests untill we close it
                             // everytime we make a change we need to restart the server
                             // enterypoint for example for the help page: "localhost:3000/help"   for the root:  "localhost:3000"
-    console.log('Server is up on port 3000.');  // will dispay when running the application
+    console.log('Server is up on port ' + port);  // will dispay when running the application
 }); 
 
 

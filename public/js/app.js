@@ -30,7 +30,7 @@ weatherForm.addEventListener('submit', (e) => {    // first argument is the name
 
     messageOne.textContent = 'Loading..';
     messageTwo.textContent = '';  
-    fetch('http://localhost:3000/weather?address=' + location).then((response) => { // the callback function will run when the data is available (meaning in asynchronous way)
+    fetch('/weather?address=' + location).then((response) => { // the callback function will run when the data is available (meaning in asynchronous way)
         // fetch is browser based API (it's not accesible in a backend node script)
 
         response.json().then((data) => {    // the callback function will run when the JSON data has arrived and been parsed
